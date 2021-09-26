@@ -1,0 +1,157 @@
+
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+:root {
+    --padding-body: 0.8rem 0.8rem 1.6rem;
+    --font-size-hlavni: clamp(1.8rem, 6vw, 2.8rem);
+    --font-size-jmeno: clamp(1.1rem, 5vw, 1.4rem); 
+    --font-size-barva: clamp(0.4rem, 5vw, 1.1rem);  
+    --font-size-kdo-vyhral: clamp(1rem, 5vw, 1.3rem);
+    --font-size-hrat-znovu: clamp(0.4rem, 4vw, 1rem);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    max-width: 600px;
+    padding: var(--padding-body);
+    margin: auto;
+}
+
+.hlavni-nazev {
+    font-size: var(--font-size-hlavni);
+    text-align: center;
+}
+
+/* --- navigace --- */
+
+.navigace {
+    display: flex;
+    max-width: 100%;
+    justify-content: space-between;
+}
+
+.bily-hrac,
+.cerny-hrac {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.cerny-hrac {
+    flex-direction: row-reverse;
+}
+
+.ikona-hrac {
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.ikona-bily-hrac {
+    margin-right: 0.6rem;
+}
+
+.ikona-cerny-hrac {
+    margin-left: 0.6rem;
+}
+
+.popisek-hrac {
+    display: flex;
+    flex-direction: column;
+}
+
+.popisek-cerny-hrac {
+    align-items: flex-end;
+}
+
+.jmeno-hrac {
+    font-size: var(--font-size-jmeno);
+}
+
+.barva-hrac {
+    font-size: var(--font-size-barva);
+    margin: 0;
+}
+
+/* --- sachovnice --- */
+
+.sachovnice {
+    background-image: url('obrazky/sachovnice.png');
+    background-size: 100% 100%;
+    border: 10px solid #301a0a;
+    border-radius: 6px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    aspect-ratio: 1 / 1;
+}
+
+.sachovnice img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+.sachovnice a {
+    display: flex;
+    aspect-ratio: 1 / 1;
+}
+
+/* --- paticka --- */
+
+.paticka {
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.kdo-vyhral {
+    display: flex;
+    justify-content: center;
+    width: 130px;
+    margin: 0;
+    font-size: var(--font-size-kdo-vyhral);
+    font-weight: normal;
+}
+
+.hrat-znovu {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(64, 64, 231);
+    border: 1px solid rgb(19, 19, 51);
+    border-radius: 3px;
+    min-width: 100px;
+    max-width: 130px;
+}
+
+.hrat-znovu a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: var(--font-size-hrat-znovu);
+    letter-spacing: 1px;
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+}
+
+.hrat-znovu:hover,
+.hrat-znovu:focus {
+    background-color: rgba(183, 14, 206, 0.76);
+    cursor: pointer;
+} 
+
